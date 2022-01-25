@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tabs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="search">
+            <form onsubmit="return false" id="#form">
+                <input type="text" id="input-city" placeholder="Enter the city">
+                <input type="image" class="search-button" src="img/search.svg">
+            </form>
+        </div>
+        <div class="display">
+            <div class="now-display">
+                <div class="content">
+
+                </div>
+                <div class="button-display">
+                    <div class="now-btn button active"><span class="content">Now</span></div>
+                    <div class="details-btn button"><span class="content">Details</span></div>
+                    <div class="forecast-btn button"><span class="content">Forecast</span></div>
+                </div>
+            </div>
+            <div class="added-location">
+                <div class="label-location">
+                    <p>Added locations: </p>
+                </div>
+                <div class="save-locations">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

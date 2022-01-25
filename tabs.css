@@ -1,0 +1,53 @@
+.content {
+    height: 360px;
+    overflow: auto;
+    scrollbar-width: none; 
+}
+
+.content::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+.card {
+    display: grid;
+    grid-template-areas: "date date time"
+                          "temperature temperature state"
+                          "feelLike feeLike icon";
+    grid-template-rows: 65px 1fr 1fr;
+    border: 1px solid black;
+    width: 255px;
+    height: 110px;
+    padding: 10px;
+    margin-bottom: 9px;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.date {
+    grid-area: date;
+}
+
+.time {
+    grid-area: time;
+    justify-self: end;
+}
+
+.temperature {
+    grid-area: temperature;
+}
+
+.state {
+    grid-area: state;
+    justify-self: end;
+}
+
+.feel_like {
+    grid-area: feelLike;
+}
+
+.icon {
+    grid-area: icon;
+    align-self: start;
+    justify-self: end;
+}

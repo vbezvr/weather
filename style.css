@@ -1,0 +1,158 @@
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+.wrapper {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.search {
+    height: 45px;
+    border-bottom: 1px solid black;
+}
+input[type='text'] {
+    vertical-align: middle;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+    font-size: 18px;
+    margin: 12px; 
+    margin-left: 16px;
+}
+.search-button {
+    float: right;
+    width: 21.86px;
+    height: 21.86px;
+    margin-right: 21px;
+    margin-top: 12px;
+}
+
+.display {
+    display: grid;
+    grid-template-columns: 298px 1fr;
+    height: 405px;
+    padding: 0;
+}
+
+.now-display {
+    border-right: 1px solid black;
+    position:relative;
+    
+}
+
+.degree {
+    font-size: 70px;
+    line-height: 120px;
+    margin-left: 23px;
+    margin-top: 20px;
+}
+
+.weather-icon {
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.like-btn {
+    opacity: 0.6;
+}
+
+.like-btn:hover {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+.checked {
+    opacity: 1;
+}
+
+.city-footer {
+    margin-top: 58px;
+    margin-left: 12px;
+    margin-right: 26px;
+}
+
+.like-btn {
+    float:right;
+}
+
+.button-display {
+    display: flex;
+    width: 298px;
+    height: 44px;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+}
+
+.button {
+    font-size: 18px;
+    width: 99px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    cursor: pointer;
+    padding-top: 11px;
+    
+}
+
+.button:nth-child(3) {
+    border-right: none;
+    width: 100px;
+}
+
+.active {
+    background-color: black;
+    color: white;
+}
+
+.label-location {
+    display: flex;
+    height: 68px;
+    border-bottom: 1px solid black;
+    padding-left: 18px;
+}
+
+.save-locations {
+    display: flex;
+    flex-direction: column;
+    padding-left: 18px;
+    padding-top: 35px;
+}
+
+.label-location p {
+    margin-top: 33px;
+}
+
+.save-locations div {
+    margin: 0;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.save-locations div a{
+    float: right;
+    margin-right: 18px;
+}
+
+.now-display p {
+    margin-top: 33px;
+    padding-left: 17px;
+}
+
+.details-display {
+    display: flex;
+    flex-direction: column;
+    margin-top: 42px;
+}
+
+.details-display p {
+    margin: 0;
+    margin-bottom: 12px;
+}
