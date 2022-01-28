@@ -47,8 +47,8 @@ function renderDetails(data) {
         <p>Temperature: ${data.main.temp}</p>
         <p>Feels like: ${data.main.feels_like}</p>
         <p>Weather: ${data.weather[0].main}</p>
-        <p>Sunrise: 03:21</p>
-        <p>Sunset: 18:54</p>
+        <p>Sunrise: ${getTime(data.sys.sunrise)}</p>
+        <p>Sunset: ${getTime(data.sys.sunset)}</p>
     </div>
 </div>`;
 }
