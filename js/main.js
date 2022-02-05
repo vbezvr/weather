@@ -25,18 +25,6 @@ function makeResponseWeather(city) {
 
 }
 
-// function makeResponseForecast(data) {
-//     const url = `${serverUrlForecast}?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=minutely&appid=${apiKey}&units=metric`;
-//     fetch(url)
-//     .then(res => {
-//         console.log(res);
-//         if (res.ok) return res.json();
-//     })
-//     .then(renderForecast)
-//     .catch(console.log);
-
-// }
-
 async function makeResponseForecast(data) {
     const url = `${serverUrlForecast}?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude=minutely&appid=${apiKey}&units=metric`;
     try {

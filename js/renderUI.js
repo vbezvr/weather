@@ -84,7 +84,13 @@ function updateSavedCities(city) {
 
 function setSavedCities() {
     const cities = storage.getFavoriteCities().split(",");
-    cities.forEach(createCityElement);
+    createCities(cities.length);
+    function createCities(pos) {  //recursion function
+        if (pos) {
+            createCityElement(cities[pos-1])
+            createCities(pos-1);
+        }
+    }
 }
 
 function createCityElement(city) {
