@@ -19,7 +19,9 @@ function makeResponseWeather(city) {
         return data.response;
     }
     throw new Error("404 Error: There is no such city"); })
-    .then(renderNowTab)
+    .then(data => {
+        renderNowTab(data);
+    })
     .catch(err => alert(err.message + err.stack))
     .finally(UI.INPUT.value="");
 
@@ -46,8 +48,10 @@ function getCurrentCity() {
 }
 
 makeResponseWeather(storage.getCurrentCity() || "Morozovsk");
+
 if (storage.getFavoriteCities().length !== 0) {
     setSavedCities();
 }
 
 UI.SEARCH_BUTTON.addEventListener("click", makeResponseWeather);
+

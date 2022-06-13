@@ -4,6 +4,7 @@ export const storage = {
     },
     saveCurrentCity(currentCity) {
         localStorage.setItem("currentCity", currentCity);
+        
     },
     getFavoriteCities() {
         return localStorage.getItem("cities");

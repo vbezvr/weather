@@ -1,6 +1,5 @@
 import {data, makeResponseForecast} from "./main.js";
 import { renderNowTab } from "./renderUI.js";
-import { storage } from "./storage.js";
 export {UI, loadForecast, renderForecast}
 const UI = {
     INPUT: document.querySelector("#input-city"),
@@ -42,6 +41,7 @@ function renderTab(button, renderFunc) {
 }
 
 function renderDetails(data) {
+    console.log(getCookie("city"));
     UI.display.innerHTML = ` <p>${data.name}</p>
     <div class="details-display">
         <p>Temperature: ${data.main.temp}</p>
@@ -53,7 +53,8 @@ function renderDetails(data) {
 </div>`;
 }
 
-function loadForecast() {
+async function loadForecast() {
+   const {storage} = await import("./storage.js")
     UI.display.innerHTML = `<p>${storage.getCurrentCity()}</p>`;
     data.response.then(makeResponseForecast)
 }
